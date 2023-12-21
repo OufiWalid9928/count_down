@@ -1,0 +1,196 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{overflow: hidden;}
+body{
+    height: 100v;
+  display: flex;
+  flex-direction: colum;
+
+
+}
+.background{
+    height: 100vh;
+    position: absolute;
+    background: linear-gradient(hsl(234,17%,12%),
+    hsl(350, 35%,13%));
+    width: 100%;
+    z-index: -1;
+
+}
+
+.stars{
+    background: url('images/bg-stars.svg');
+    width: 100%;
+    height: 79%;
+    display: flex;
+    background-size: fill;
+    
+
+}
+.hills{
+    background: url('images/pattern-hills.svg') no-repeat;
+    width: 100%;
+    height: 36%;
+    display: flex;
+    background-size: fill;
+    background-position: 0px 39px;
+}
+
+.container{
+    z-index: 44;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0  3rem;
+    position: relative;
+    justify-content: space-around;
+    height: 100vh;
+
+}
+
+.heading{
+    padding: 1rem 0rem;
+    text-align: center;
+    font-size: 1.3rem;
+
+}
+
+.heading h1{
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    cursor: pointer;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -moz-text-fill-color:transparent;
+    
+}
+
+.heading h1:hover{
+    background: linear-gradient(hsl(345,90%,60%),rgb(245,46,195));
+  
+    
+
+}
+
+
+.countdown-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-font{
+    display: flex;
+    background: linear-gradient(hsl(235, 16%, 15%) 50%,
+    hsl(237,21%, 20%)50%);
+    height: 90px;
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 4px 3px rgba(0,0,0,0.377);
+    border-radius: 10px;
+    z-index: 44;
+    position: relative;
+    transition: all .4s ease-in;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.countdown-font.active{
+    transform: translateY(360deg);
+}
+.countdown-font::after{
+    position: absolute;
+    content: "";
+    width: 8%;
+    height: 10%;
+    background: hsl(346, 27%, 7%);
+    left: 0px;
+    top: 44%;
+    border-radius: 0 50% 80% 0;
+
+
+}
+
+.countdown-font::before{
+    position: absolute;
+    content: "";
+    width: 8%;
+    height: 10%;
+    background: hsl(348, 26%,7%);
+    right: 0px;
+    top: 44%;
+    border-radius: 50% 0 0 80%;
+}
+
+.text{
+    font-size: 2.3rem;
+    color: hsl(345,95%,68%);
+    cursor: pointer;
+    transition: all .4s ease-in;
+}
+
+.text:hover{color: 345,82%, 52%;}
+
+
+.description{
+    margin-top: 1rem;
+     font-size: 0.8rem;
+     color: rgb(109, 108, 108);
+     letter-spacing: 3px;
+}
+
+
+.brand-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 3rem;
+}
+
+.brand-wrapper a{
+    margin: 0 12px;
+    text-decoration: none;
+    color: rgba(255,255,255, 0.438);
+    font-size: 1.8rem;
+    transition: all 0.4 ease-in;
+}
+.brand-wrapper a:hover{
+    color: hsl(345,82,52);
+}
+
+.brand-wrapper a img{
+    border-radius: 50%;
+}
+
+@media screen and (min-width:1440px){
+
+.hills{
+    background: url('images/pattern-hills.svg') no-repeat;
+
+   height: 36%;
+   width: 100%;
+   display: flex;
+   background-size: cover;
+   background-position: 0px 39px;
+}
+
+
+}
